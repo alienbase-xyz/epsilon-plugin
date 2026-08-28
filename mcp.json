@@ -6,6 +6,7 @@
       "env": {
         "EPSILON_API_KEY": "${EPSILON_API_KEY}",
         "EPSILON_WALLET_KEY": "${EPSILON_WALLET_KEY}",
+        "EPSILON_REFERRER": "${EPSILON_REFERRER}",
         "EPSILON_MAX_ORDER_USD": "250",
         "EPSILON_REQUIRE_CONFIRM": "true"
       }

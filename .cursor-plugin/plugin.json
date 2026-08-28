@@ -2,8 +2,29 @@
   "name": "epsilon",
   "displayName": "Epsilon — trade on Robinhood Chain",
   "description": "Trade and build on Epsilon, the limit-order DEX on Robinhood Chain: non-custodial limit/stop/DCA orders via MCP, REST API, and TypeScript/Python SDKs. Includes trading and API-integration skills plus Robinhood Chain conventions.",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "logo": "assets/logo.svg",
+  "variables": {
+    "type": "object",
+    "properties": {
+      "EPSILON_API_KEY": {
+        "type": "string",
+        "title": "Epsilon API key",
+        "description": "Free self-serve key (eps_…) from https://developers.epsilon.exchange/dashboard. Required for quotes, market data, and orders."
+      },
+      "EPSILON_WALLET_KEY": {
+        "type": "string",
+        "title": "Trading wallet private key (optional)",
+        "description": "0x-prefixed private key of a DEDICATED trading wallet with limited funds — never your main wallet. Leave empty for read-only mode (quotes and market data only). Orders are signed locally; the key never leaves your machine."
+      },
+      "EPSILON_REFERRER": {
+        "type": "string",
+        "title": "Rev-share payout address (optional)",
+        "description": "0x address that earns the on-chain referral leg of fills routed through this plugin (permissionless rev-share)."
+      }
+    },
+    "required": ["EPSILON_API_KEY"]
+  },
   "author": { "name": "Epsilon", "url": "https://developers.epsilon.exchange" },
   "homepage": "https://developers.epsilon.exchange",
   "repository": "https://github.com/alienbase-xyz/epsilon-plugin",
