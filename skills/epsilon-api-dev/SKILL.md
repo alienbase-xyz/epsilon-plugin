@@ -93,9 +93,13 @@ over any manual re-derivation.
 4. Handle 401 (`KEY_MISSING`/`KEY_INVALID`), 429 (back off until
    `X-RateLimit-Reset`), and 4xx validation errors (the body's `code` +
    `error` are actionable — surface them).
-5. For products routing OTHER people's flow: apply for the builder tier on
-   the dashboard — 5× rate limits and on-chain rev-share (your
-   `referrer_address` earns a fee cut on every fill you route).
+5. For products routing OTHER people's flow: pass `referrer=0xYourAddress`
+   on `GET /v1/route` (TS: `fetchOrderRoute({ …, referrer })`, Python:
+   `order_route(…, referrer=…)`) — the referral leg of every fill you route
+   is paid to that address on-chain, permissionlessly, from the first fill.
+   The ppm is policy-set; you pick the destination only. Apply for the
+   builder tier on the dashboard when you need 5× rate limits and the
+   earnings view.
 
 ## Reference
 
