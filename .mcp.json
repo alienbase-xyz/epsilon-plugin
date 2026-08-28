@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "epsilon": {
+      "command": "npx",
+      "args": ["-y", "@epsilon-exchange/mcp"],
+      "env": {
+        "EPSILON_API_KEY": "${EPSILON_API_KEY}",
+        "EPSILON_WALLET_KEY": "${EPSILON_WALLET_KEY}",
+        "EPSILON_MAX_ORDER_USD": "250",
+        "EPSILON_REQUIRE_CONFIRM": "true"
+      }
+    }
+  }
+}

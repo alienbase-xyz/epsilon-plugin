@@ -26,6 +26,15 @@ Installs the `epsilon-trading` and `epsilon-api-dev` skills into Cursor,
 Claude Code, Codex, Cline, and 13+ other agent runtimes. Then tell your
 agent to set up the MCP server (config below) for live tools.
 
+## Claude Code marketplace
+
+This repo is also a Claude Code plugin marketplace:
+
+```
+/plugin marketplace add alienbase-xyz/epsilon-plugin
+/plugin install epsilon
+```
+
 ## Setup
 
 1. Get a free API key at

@@ -1,0 +1,20 @@
+{
+  "name": "epsilon",
+  "owner": { "name": "Epsilon", "url": "https://developers.epsilon.exchange" },
+  "metadata": {
+    "description": "Official Epsilon plugins for AI agents — trading and API integration on Robinhood Chain.",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "epsilon",
+      "source": "./",
+      "description": "Epsilon trading + API-dev skills and non-custodial MCP trading tools for Robinhood Chain (chain id 4663).",
+      "author": { "name": "Epsilon" },
+      "homepage": "https://developers.epsilon.exchange",
+      "license": "MIT",
+      "keywords": ["robinhood-chain", "dex", "trading", "defi", "limit-orders", "mcp"],
+      "category": "productivity"
+    }
+  ]
+}
