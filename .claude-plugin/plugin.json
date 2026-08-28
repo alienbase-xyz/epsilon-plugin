@@ -1,10 +1,10 @@
 {
   "name": "epsilon",
-  "description": "Trade and build on Epsilon, the limit-order DEX on Robinhood Chain: non-custodial limit/stop/DCA orders via MCP, plus trading and API-integration skills.",
-  "version": "0.1.0",
+  "description": "Trade on Robinhood Chain from your agent: limit orders, stop-losses, and DCA on memecoins, RWAs, and majors — quotes, orders, and portfolio in chat. Non-custodial with spend caps and confirmations, plus API/SDK skills for building bots.",
+  "version": "0.1.3",
   "author": { "name": "Epsilon", "url": "https://developers.epsilon.exchange" },
   "homepage": "https://developers.epsilon.exchange",
   "repository": "https://github.com/alienbase-xyz/epsilon-plugin",
   "license": "MIT",
-  "keywords": ["robinhood-chain", "dex", "trading", "defi", "limit-orders", "mcp"]
+  "keywords": ["robinhood-chain", "robinhood", "dex", "trading", "defi", "limit-orders", "stop-loss", "dca", "memecoins", "rwa", "mcp"]
 }

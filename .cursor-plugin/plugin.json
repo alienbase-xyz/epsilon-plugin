@@ -1,8 +1,8 @@
 {
   "name": "epsilon",
   "displayName": "Epsilon — trade on Robinhood Chain",
-  "description": "Trade and build on Epsilon, the limit-order DEX on Robinhood Chain: non-custodial limit/stop/DCA orders via MCP, REST API, and TypeScript/Python SDKs. Includes trading and API-integration skills plus Robinhood Chain conventions.",
-  "version": "0.1.2",
+  "description": "Trade on Robinhood Chain from your agent: limit orders, stop-losses, and DCA on memecoins, RWAs, and majors — get quotes, place and cancel orders, track your portfolio in chat. Non-custodial (signed locally, funds stay in your wallet) with spend caps and order confirmations. Also skills for building bots and apps on the Epsilon REST API and TypeScript/Python SDKs.",
+  "version": "0.1.3",
   "logo": "assets/logo.svg",
   "variables": {
     "type": "object",
@@ -29,5 +29,5 @@
   "homepage": "https://developers.epsilon.exchange",
   "repository": "https://github.com/alienbase-xyz/epsilon-plugin",
   "license": "MIT",
-  "keywords": ["robinhood-chain", "dex", "trading", "defi", "limit-orders", "mcp", "web3"]
+  "keywords": ["robinhood-chain", "robinhood", "dex", "trading", "defi", "limit-orders", "stop-loss", "dca", "memecoins", "rwa", "mcp", "web3"]
 }

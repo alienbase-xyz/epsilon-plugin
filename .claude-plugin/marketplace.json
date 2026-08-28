@@ -9,7 +9,7 @@
     {
       "name": "epsilon",
       "source": "./",
-      "description": "Epsilon trading + API-dev skills and non-custodial MCP trading tools for Robinhood Chain (chain id 4663).",
+      "description": "Trade on Robinhood Chain from your agent: limit orders, stop-losses, and DCA on memecoins, RWAs, and majors — non-custodial, with spend caps and confirmations. Plus API/SDK skills for building bots.",
       "author": { "name": "Epsilon" },
       "homepage": "https://developers.epsilon.exchange",
       "license": "MIT",
