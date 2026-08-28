@@ -1,7 +1,10 @@
 # Epsilon plugin
 
-Trade and build on [Epsilon](https://www.epsilon.exchange) — the
-limit-order DEX on Robinhood Chain — from your AI agent.
+Trade on [Epsilon](https://www.epsilon.exchange) — the limit-order DEX on
+Robinhood Chain — straight from your AI agent, in about 30 seconds:
+install, paste a free API key, then say *"buy $20 of WETH if it dips 3%"*.
+Non-custodial: orders are EIP-712 messages signed locally, your keys never
+leave your machine, and funds stay in your wallet until fill.
 
 This plugin bundles:
 
@@ -37,16 +40,21 @@ This repo is also a Claude Code plugin marketplace:
 
 ## Setup
 
-1. Get a free API key at
-   [developers.epsilon.exchange/dashboard](https://developers.epsilon.exchange/dashboard)
-   and set `EPSILON_API_KEY`.
-2. (Trading only) Set `EPSILON_WALLET_KEY` to a **dedicated trading
-   wallet's** private key — never your main wallet. Read-only tools work
-   without it.
-3. Safety rails are on by default in this plugin's MCP config:
-   `EPSILON_MAX_ORDER_USD=250` (per-order cap) and
-   `EPSILON_REQUIRE_CONFIRM=true` (the agent must show you a confirmation
-   before any order). Adjust in your MCP settings.
+In Cursor, the plugin prompts for these at install (Configure on the plugin
+card); elsewhere set them as environment variables:
+
+1. `EPSILON_API_KEY` (required) — free self-serve key from
+   [developers.epsilon.exchange/dashboard](https://developers.epsilon.exchange/dashboard).
+2. `EPSILON_WALLET_KEY` (trading only) — private key of a **dedicated
+   trading wallet** with limited funds, never your main wallet. Leave empty
+   for read-only mode (quotes, market data, portfolio).
+3. `EPSILON_REFERRER` (optional) — a 0x address that earns the on-chain
+   referral leg of fills you route (permissionless rev-share).
+
+Safety rails are on by default in this plugin's MCP config:
+`EPSILON_MAX_ORDER_USD=250` (per-order cap, fails closed) and
+`EPSILON_REQUIRE_CONFIRM=true` (the agent must show you a preview and get
+your confirmation before any order). Adjust in your MCP settings.
 
 ## Without the plugin
 
