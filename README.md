@@ -16,6 +16,16 @@ This plugin bundles:
 - **Robinhood Chain rules** — chain facts and conventions so code the agent
   writes for chain id 4663 lands on the right endpoints and signing scheme.
 
+## One-command skill install (any skills-compatible agent)
+
+```
+npx skills add alienbase-xyz/epsilon-plugin
+```
+
+Installs the `epsilon-trading` and `epsilon-api-dev` skills into Cursor,
+Claude Code, Codex, Cline, and 13+ other agent runtimes. Then tell your
+agent to set up the MCP server (config below) for live tools.
+
 ## Setup
 
 1. Get a free API key at
