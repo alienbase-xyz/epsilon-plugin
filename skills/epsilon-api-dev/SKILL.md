@@ -59,6 +59,7 @@ const amountIn = 100_000_000n // 100 USDG (6 decimals)
 const route = await fetchOrderRoute(cfg, {
   tokenIn: USDG_ADDRESS, tokenOut: weth.address,
   amountIn: amountIn.toString(), slippagePpm: 10_000, wallet: account.address,
+  orderType: 'limit', // must match the submit — fees are one order-kind × token-class cell
 })
 
 // 2. ensure router allowance once per token (skippable if already approved)
@@ -84,6 +85,10 @@ over any manual re-derivation.
 
 ## Integration checklist
 
+0. Fetch `GET /v1/route` with the same `orderType=` you will submit
+   (`limit | stop_loss | take_profit | dca | trailing`, `triggered=1` for a
+   price-gated DCA) — fees are priced per order-kind × token-class cell and
+   the submit exact-matches the served cell.
 1. Quote before every placement; never reuse stale routes (`feeLegs` embed
    referral data and route freshness matters).
 2. Check/raise the router allowance before the first order per token.
